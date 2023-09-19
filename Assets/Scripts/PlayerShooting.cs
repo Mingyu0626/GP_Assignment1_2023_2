@@ -25,18 +25,19 @@ public class PlayerShooting : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Instantiate(prefab, transform.position, transform.rotation);
+            Instantiate(prefab, shootPoint.transform.position, shootPoint.transform.rotation);
+
             if (isShotgunMode)
             {
                 GameObject clone1 = Instantiate(prefab);
-                clone1.transform.position = transform.position;
-                clone1.transform.rotation = transform.rotation;
-                clone1.transform.Translate(2, 0, 0);
+                clone1.transform.position = shootPoint.transform.position;
+                clone1.transform.rotation = shootPoint.transform.rotation;
+                clone1.transform.Translate(3, 0, 0);
 
                 GameObject clone2 = Instantiate(prefab);
-                clone2.transform.position = transform.position;
-                clone2.transform.rotation = transform.rotation;
-                clone2.transform.Translate(-2, 0, 0);
+                clone2.transform.position = shootPoint.transform.position;
+                clone2.transform.rotation = shootPoint.transform.rotation;
+                clone2.transform.Translate(-3, 0, 0);
 
             }
 
