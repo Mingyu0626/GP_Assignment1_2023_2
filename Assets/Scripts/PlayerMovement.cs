@@ -33,34 +33,33 @@ public class PlayerBehavior : MonoBehaviour
             transform.Translate(speed * Time.deltaTime, 0, 0);
         }
 
+        // 대쉬 모드 ON
         if (Input.GetKey(KeyCode.Z))
         {
             if (!isDash)
             {
-                speed = speed * (float)2;
+                speed = speed * 2;
                 isDash = true;
             }
-
         }
 
+        // 대쉬 모드 OFF
         if (Input.GetKey(KeyCode.C))
         {
             if (isDash)
             {
-                speed = speed / (float)2;
+                speed = speed / 2;
                 isDash = false;
             }
-
         }
 
-
-        // 반시계 회전 회오리
+        // 플레이어(탱크)의 반시계 방향 회전
         if (Input.GetKey(KeyCode.Q))
         {
             transform.Rotate(0, -10 * rotationSpeed * Time.deltaTime, 0);
         }
 
-        // 시계 회전 회오리
+        // 플레이어(탱크)의 시계 방향 회전
         if (Input.GetKey(KeyCode.E))
         {
             transform.Rotate(0, 10 * rotationSpeed * Time.deltaTime, 0);

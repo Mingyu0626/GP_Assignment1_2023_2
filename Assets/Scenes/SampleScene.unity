@@ -1270,6 +1270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 1618060978781705297, guid: f45b9e1619de42641b84b990a1f7d6c7, type: 3}
   shootPoint: {fileID: 731055890}
+  isShotgunMode: 0
 --- !u!114 &38834615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1283,7 +1284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDash: 0
-  speed: 15
+  speed: 20
   rotationSpeed: 10
 --- !u!4 &38834616 stripped
 Transform:
@@ -18819,7 +18820,7 @@ Transform:
   m_GameObject: {fileID: 731055890}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.009, y: 2.5, z: 6.082}
+  m_LocalPosition: {x: 0.009, y: 1.88, z: 6.082}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
