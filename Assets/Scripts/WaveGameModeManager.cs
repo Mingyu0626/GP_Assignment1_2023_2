@@ -10,14 +10,11 @@ public class WaveGameModeManager : MonoBehaviour
 
     void Start()
     {
-    }
-
-    void Awake()
-    {
         playerLife.onDeath.AddListener(OnPlayerOrBaseDied);
         playerBaseLife.onDeath.AddListener(OnPlayerOrBaseDied);
         EnemiesManager.instance.onChanged.AddListener(CheckWinCondition);
         WavesManager.instance.onChanged.AddListener(CheckWinCondition);
+        EnemiesManager.instance.onChanged.AddListener(CheckLoseCondition);
     }
 
     void OnPlayerOrBaseDied()
@@ -27,9 +24,18 @@ public class WaveGameModeManager : MonoBehaviour
 
     void CheckWinCondition()
     {
-        if (EnemiesManager.instance.enemies.Count <= 0 && WavesManager.instance.waves.Count <= 0)
+        if (WavesManager.instance.waves.Count <= 0 
+            || EnemiesManager.instance.enemies.Count <= 0)
         {
             SceneManager.LoadScene("WinScreen");
+        }
+    }
+
+    void CheckLoseCondition()
+    {
+        if (EnemiesManager.instance.enemies.Count >= 30)
+        {
+            SceneManager.LoadScene("LoseScreen");
         }
     }
 }
