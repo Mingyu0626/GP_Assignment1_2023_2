@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 public class WaveGameModeManager : MonoBehaviour
 {
     [SerializeField] private Life playerLife;
-    [SerializeField] private Life playerBaseLife;
+    // [SerializeField] private Life playerBaseLife;
 
     void Start()
     {
         playerLife.onDeath.AddListener(OnPlayerOrBaseDied);
-        playerBaseLife.onDeath.AddListener(OnPlayerOrBaseDied);
+        // playerBaseLife.onDeath.AddListener(OnPlayerOrBaseDied);
         EnemiesManager.instance.onChanged.AddListener(CheckWinCondition);
         WavesManager.instance.onChanged.AddListener(CheckWinCondition);
         EnemiesManager.instance.onChanged.AddListener(CheckLoseCondition);
