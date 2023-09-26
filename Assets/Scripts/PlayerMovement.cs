@@ -31,6 +31,20 @@ public class PlayerBehavior : MonoBehaviour
         lookValue = value.Get<Vector2>().x * rotationSpeed;
     }
 
+    public void OnDash(InputValue value)
+    {
+        if (!isDash)
+        {
+            speed = speed * 2;
+            isDash = true;
+        }
+        else 
+        {
+            speed = speed / 2;
+            isDash = false;
+        }
+    }
+
     void Update()
     {
         rb.AddRelativeForce(
@@ -40,42 +54,6 @@ public class PlayerBehavior : MonoBehaviour
 
         rb.AddRelativeTorque(0, lookValue * Time.deltaTime, 0);
 
-        //if (Input.GetKey(KeyCode.W))
-        //{
-        //    transform.Translate(0, 0, speed * Time.deltaTime);
-        //}
-        //if (Input.GetKey(KeyCode.S))
-        //{
-        //    transform.Translate(0, 0, -speed * Time.deltaTime);
-        //}
-        //if (Input.GetKey(KeyCode.A))
-        //{
-        //    transform.Translate(-speed * Time.deltaTime, 0, 0);
-        //}
-        //if (Input.GetKey(KeyCode.D))
-        //{
-        //    transform.Translate(speed * Time.deltaTime, 0, 0);
-        //}
-
-        //// 대쉬 모드 ON
-        //if (Input.GetKey(KeyCode.Z))
-        //{
-        //    if (!isDash)
-        //    {
-        //        speed = speed * 2;
-        //        isDash = true;
-        //    }
-        //}
-
-        //// 대쉬 모드 OFF
-        //if (Input.GetKey(KeyCode.C))
-        //{
-        //    if (isDash)
-        //    {
-        //        speed = speed / 2;
-        //        isDash = false;
-        //    }
-        //}
 
         //// 플레이어(탱크)의 반시계 방향 회전
         //if (Input.GetKey(KeyCode.Q))

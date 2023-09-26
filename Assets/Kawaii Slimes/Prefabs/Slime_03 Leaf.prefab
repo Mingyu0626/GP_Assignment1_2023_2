@@ -227,6 +227,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6118174221721670358}
   - component: {fileID: -4070026210247412177}
+  - component: {fileID: 7356950927684594994}
+  - component: {fileID: 1884963786535235382}
+  - component: {fileID: -8881728341069910052}
   - component: {fileID: -4065236973042011425}
   - component: {fileID: 5741840142025755249}
   m_Layer: 7
@@ -268,6 +271,44 @@ MonoBehaviour:
   speed: 10
   delay: 10
   randomMovement: 0
+--- !u!114 &7356950927684594994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6891580169314388076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dcd8886102a25e41a9e97372af01200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amount: 1
+--- !u!114 &1884963786535235382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6891580169314388076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1424ab537d9c3d4ab19718953257be7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-8881728341069910052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6891580169314388076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bc2e6a2175c3684fb2c93d83daa4f13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amount: 1
 --- !u!136 &-4065236973042011425
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -287,10 +328,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.3
+  m_Height: 1
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.3, z: 0}
 --- !u!54 &5741840142025755249
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -314,9 +355,9 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 20
   m_CollisionDetection: 0
 --- !u!1 &7647819984296596885
 GameObject:

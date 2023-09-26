@@ -10,15 +10,22 @@ public class WaveSpawner : MonoBehaviour
     public float spawnRate;
     public float rotationSpeed;
 
-    void Start()
+    private void Start()
     {
+        WavesManager.instance.waves.Add(this);
         InvokeRepeating("Spawn", startTime, spawnRate);
-        Invoke("CancelInvoke", endTime);
+        Invoke("EndSpawner", endTime);
     }
 
     void Spawn()
     {
         Instantiate(prefab, transform.position, transform.rotation);
+    }
+
+    void EndSpawner()
+    {
+        WavesManager.instance.waves.Remove(this);
+        CancelInvoke();
     }
 
     void Update()

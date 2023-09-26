@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class ContactDestroyer : MonoBehaviour
 {
-    public float damage;
-
     void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        // Destroy(gameObject);
+        // Destroy(other.gameObject);
     }
 
 }
