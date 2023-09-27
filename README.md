@@ -5,3 +5,6 @@
 
 <br> # Assignment3
 <br> I have created a game where the player (tank) shoots slimes. I have also added dash mode, bombardment mode, and implemented left and right rotation for the player(tank).<br>
+
+<br> # Assignment4
+<br> Add Physics set, new obstacle, trigger object, and game manager.<br>
