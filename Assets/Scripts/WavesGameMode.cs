@@ -17,7 +17,7 @@ public class WavesGameMode : MonoBehaviour
             SceneManager.LoadScene("WinScreen");
         }
 
-        if (playerLife.amount <= 0 || EnemiesManager.instance.enemies.Count >= 50)
+        if (playerLife.amount <= 0 || EnemiesManager.instance.enemies.Count >= 30)
         {
             SceneManager.LoadScene("LoseScreen");
         }
