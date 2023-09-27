@@ -230,6 +230,7 @@ GameObject:
   - component: {fileID: 7356950927684594994}
   - component: {fileID: 1884963786535235382}
   - component: {fileID: -8881728341069910052}
+  - component: {fileID: 770559185562399035}
   - component: {fileID: -4065236973042011425}
   - component: {fileID: 5741840142025755249}
   m_Layer: 7
@@ -270,7 +271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   delay: 10
-  randomMovement: 0
+  randomMovement: 1
 --- !u!114 &7356950927684594994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,6 +313,21 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &770559185562399035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6891580169314388076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b36c95edc07d354fba45f238f707c67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1618060978781705297, guid: 3a1520a5dda4c1549a96d062b2342af4, type: 3}
+  shootPoint: {fileID: 5617321404793309598, guid: 19bc7016f922ae846bc32bd49c4a3ef5, type: 3}
+  shootRate: 2
 --- !u!136 &-4065236973042011425
 CapsuleCollider:
   m_ObjectHideFlags: 0

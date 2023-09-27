@@ -28,6 +28,11 @@ public class WaveSpawner : MonoBehaviour
         CancelInvoke();
     }
 
+    void Shoot()
+    {
+
+    }
+
     void Update()
     {
         transform.Rotate(0, 10 * rotationSpeed * Time.deltaTime, 0);

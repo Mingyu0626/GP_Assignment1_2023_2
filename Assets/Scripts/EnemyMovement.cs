@@ -12,7 +12,7 @@ public class EnemyMovement : MonoBehaviour
     void Start()
     {
         // Destroy(gameObject, delay);
-        InvokeRepeating("RandomMove", 0, 2);
+        InvokeRepeating("RandomMove", 0, randomMovement);
     }
 
     // Update is called once per frame
