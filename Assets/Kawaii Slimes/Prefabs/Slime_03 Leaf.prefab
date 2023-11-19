@@ -225,7 +225,7 @@ MonoBehaviour:
   playerAttackDistance: 3
   lastShootTime: 0
   BulletPrefab: {fileID: 1618060978781705297, guid: 3a1520a5dda4c1549a96d062b2342af4, type: 3}
-  fireRate: 1
+  fireRate: 3
 --- !u!1 &5286268979643726068
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,7 +448,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
