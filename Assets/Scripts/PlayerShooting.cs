@@ -7,6 +7,7 @@ public class PlayerShooting : MonoBehaviour
 {
     public GameObject prefab;
     public GameObject shootPoint;
+    public GameObject fireEffect;
     public bool isShotgunMode = false;
 
     public void OnFire(InputValue value)
@@ -19,6 +20,7 @@ public class PlayerShooting : MonoBehaviour
 
                 clone.transform.position = shootPoint.transform.position;
                 clone.transform.rotation = shootPoint.transform.rotation;
+                Instantiate(fireEffect, shootPoint.transform.position, shootPoint.transform.rotation);
             }
             else
             {
@@ -34,7 +36,7 @@ public class PlayerShooting : MonoBehaviour
                 clone2.transform.rotation = shootPoint.transform.rotation;
                 clone2.transform.Translate(-3, 0, 0);
 
-
+                Instantiate(fireEffect, shootPoint.transform.position, shootPoint.transform.rotation);
             }
         }
     }
