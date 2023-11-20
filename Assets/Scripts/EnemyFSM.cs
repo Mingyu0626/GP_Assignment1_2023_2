@@ -59,6 +59,10 @@ public class EnemyFSM : MonoBehaviour
         agent.isStopped = true;
         LookTo(baseTransform.position);
         Shoot();
+        if (sightSensor.detectedObject != null)
+        {
+            currentState = EnemyState.ChasePlayer;
+        }
         // print("AttackBase");
     }
     void ChasePlayer()
@@ -73,7 +77,7 @@ public class EnemyFSM : MonoBehaviour
                 currentState = EnemyState.GoToBase;
                 return;
             }
-            print("ChasePlayer - Object is null");
+            //print("ChasePlayer - Object is null");
         }
         else
         {
@@ -88,17 +92,18 @@ public class EnemyFSM : MonoBehaviour
             {
                 currentState = EnemyState.AttackPlayer;
             }
-            print("ChasePlayer - Object is detected");
+            //print("ChasePlayer - Object is detected");
         }
     }
     void AttackPlayer()
     {
         agent.isStopped = true;
-        if (sightSensor.detectedObject == null)
+        if (sightSensor.detectedObject == null && Time.time - lastDetectionTime > 3f)
         {
             currentState = EnemyState.GoToBase;
             return;
         }
+        lastDetectionTime = Time.time;
         LookTo(sightSensor.detectedObject.transform.position);
         Shoot();
 
