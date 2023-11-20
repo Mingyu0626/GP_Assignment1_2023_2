@@ -1391,7 +1391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDash: 0
   speed: 3000
-  rotationSpeed: 3000
+  rotationSpeed: 1000
 --- !u!4 &38834616 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3516137608261551286, guid: 19c9e252c2c72204cad4cf26c89b7a8c, type: 3}

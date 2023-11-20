@@ -52,14 +52,14 @@ public class EnemyFSM : MonoBehaviour
         {
             currentState = EnemyState.AttackBase;
         }
-        print("GoToBase");
+        // print("GoToBase");
     }
     void AttackBase()
     {
         agent.isStopped = true;
         LookTo(baseTransform.position);
         Shoot();
-        print("AttackBase");
+        // print("AttackBase");
     }
     void ChasePlayer()
     {
@@ -109,7 +109,7 @@ public class EnemyFSM : MonoBehaviour
         {
             currentState = EnemyState.ChasePlayer;
         }
-        print("AttackPlayer");
+        // print("AttackPlayer");
     }
 
     void AvoidBullet()
@@ -120,7 +120,7 @@ public class EnemyFSM : MonoBehaviour
             currentState = EnemyState.GoToBase;
         }
         LookTo(sightSensor.detectedObject.transform.position);
-        print("AvoidBullet");
+        // print("AvoidBullet");
     }
 
     private void OnDrawGizmos()
