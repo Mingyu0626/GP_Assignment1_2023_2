@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 public class WavesGameMode : MonoBehaviour
 {
     [SerializeField] Life playerLife;
+    [SerializeField] Life basementLife;
     void Start()
     {
-        Invoke("CheckWavesEnd", 20);
+        Invoke("CheckWavesEnd", 60);
     }
     void Update()
     {
@@ -17,10 +18,15 @@ public class WavesGameMode : MonoBehaviour
             SceneManager.LoadScene("WinScreen");
         }
 
-        if (playerLife.amount <= 0 || EnemiesManager.instance.enemies.Count >= 30)
+        if (playerLife.amount <= 0 || EnemiesManager.instance.enemies.Count >= 100000)
         {
             SceneManager.LoadScene("LoseScreen");
         }
+
+        //if (basementLife.amount <= 10)
+        //{
+        //    SceneManager.LoadScene("LoseScreen");
+        //}
     }
 
     void CheckWavesEnd()

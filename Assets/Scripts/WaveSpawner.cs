@@ -7,7 +7,7 @@ public class WaveSpawner : MonoBehaviour
     public GameObject prefab;
     public float startTime;
     public float endTime;
-    public float spawnRate;
+    private float spawnRate = 2;
     public float rotationSpeed;
 
     private void Start()
@@ -26,11 +26,6 @@ public class WaveSpawner : MonoBehaviour
     {
         WavesManager.instance.waves.Remove(this);
         CancelInvoke();
-    }
-
-    void Shoot()
-    {
-
     }
 
     void Update()

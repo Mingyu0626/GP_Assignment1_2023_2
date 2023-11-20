@@ -1391,7 +1391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDash: 0
   speed: 3000
-  rotationSpeed: 5000
+  rotationSpeed: 3000
 --- !u!4 &38834616 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3516137608261551286, guid: 19c9e252c2c72204cad4cf26c89b7a8c, type: 3}
@@ -1489,7 +1489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc2e6a2175c3684fb2c93d83daa4f13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 10
+  amount: 1000
   onDeath:
     m_PersistentCalls:
       m_Calls: []
@@ -3237,6 +3237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerLife: {fileID: 38834620}
+  basementLife: {fileID: 7006841164473433419, guid: 4816f7daf1cea524da32820b618bb3e4, type: 3}
 --- !u!43 &122533634
 Mesh:
   m_ObjectHideFlags: 0
@@ -11660,7 +11661,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -5336607038431071824, guid: 037dfaa7ca7b1d94a99d90edaf658706, type: 3}
       propertyPath: endTime
-      value: 20
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: -5336607038431071824, guid: 037dfaa7ca7b1d94a99d90edaf658706, type: 3}
       propertyPath: spawnRate
@@ -42416,7 +42417,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -5336607038431071824, guid: 037dfaa7ca7b1d94a99d90edaf658706, type: 3}
       propertyPath: endTime
-      value: 20
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: -5336607038431071824, guid: 037dfaa7ca7b1d94a99d90edaf658706, type: 3}
       propertyPath: spawnRate
@@ -65587,7 +65588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 699614519581692271, guid: 3fcb74258f162c74f96261a61e13b2a8, type: 3}
       propertyPath: m_Size.x
-      value: 5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 699614519581692271, guid: 3fcb74258f162c74f96261a61e13b2a8, type: 3}
       propertyPath: m_Size.y
@@ -65595,7 +65596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 699614519581692271, guid: 3fcb74258f162c74f96261a61e13b2a8, type: 3}
       propertyPath: m_Size.z
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -66931,6 +66932,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 2116287024062540783, guid: 19c9e252c2c72204cad4cf26c89b7a8c, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2151731788058089319, guid: 19c9e252c2c72204cad4cf26c89b7a8c, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -66973,15 +66978,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3516137608261551286, guid: 19c9e252c2c72204cad4cf26c89b7a8c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3516137608261551286, guid: 19c9e252c2c72204cad4cf26c89b7a8c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3516137608261551286, guid: 19c9e252c2c72204cad4cf26c89b7a8c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3516137608261551286, guid: 19c9e252c2c72204cad4cf26c89b7a8c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -85896,7 +85901,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -5336607038431071824, guid: 037dfaa7ca7b1d94a99d90edaf658706, type: 3}
       propertyPath: endTime
-      value: 20
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: -5336607038431071824, guid: 037dfaa7ca7b1d94a99d90edaf658706, type: 3}
       propertyPath: spawnRate
@@ -89447,6 +89452,10 @@ PrefabInstance:
     - target: {fileID: 1316846016406985804, guid: 4816f7daf1cea524da32820b618bb3e4, type: 3}
       propertyPath: m_Name
       value: Basement
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006841164473433419, guid: 4816f7daf1cea524da32820b618bb3e4, type: 3}
+      propertyPath: amount
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 7519117056217185310, guid: 4816f7daf1cea524da32820b618bb3e4, type: 3}
       propertyPath: m_LocalPosition.x

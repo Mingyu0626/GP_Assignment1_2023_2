@@ -197,14 +197,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3dfaa43d9dafb47a0e423a60e3a574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 7
-  angle: 45
+  distance: 70
+  angle: 360
   objectsLayers:
     serializedVersion: 2
     m_Bits: 64
   obstaclesLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   detectedObject: {fileID: 0}
 --- !u!114 &6315702952013840013
 MonoBehaviour:
@@ -222,8 +222,9 @@ MonoBehaviour:
   sightSensor: {fileID: 4908358562380523644}
   baseTransform: {fileID: 7519117056217185310, guid: 4816f7daf1cea524da32820b618bb3e4, type: 3}
   baseAttackDistance: 60
-  playerAttackDistance: 70
+  playerAttackDistance: 50
   lastShootTime: 0
+  lastDetectionTime: 0
   BulletPrefab: {fileID: 1618060978781705297, guid: 3a1520a5dda4c1549a96d062b2342af4, type: 3}
   fireRate: 3
 --- !u!1 &5286268979643726068
@@ -432,7 +433,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 20
+  m_Speed: 15
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

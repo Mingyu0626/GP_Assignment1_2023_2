@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Plastic
   - Concrete
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX
