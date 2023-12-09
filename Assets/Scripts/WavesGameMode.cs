@@ -9,7 +9,7 @@ public class WavesGameMode : MonoBehaviour
     [SerializeField] Life basementLife;
     void Start()
     {
-        Invoke("CheckWavesEnd", 60);
+        Invoke("CheckWavesEnd", 90);
     }
     void Update()
     {

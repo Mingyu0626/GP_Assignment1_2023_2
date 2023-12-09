@@ -38,7 +38,6 @@ public class WaveSpawner : MonoBehaviour
 
     void SquareMove()
     {
-        print("SquareMove");
         count += 1;
         switch (count % 4)
         {
