@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.SceneManagement;
 
 public class WavesGameMode : MonoBehaviour
 {
     [SerializeField] Life playerLife;
     [SerializeField] Life basementLife;
+    public TextMeshProUGUI currnetEnemies;
     void Start()
     {
         Invoke("CheckWavesEnd", 90);
@@ -22,11 +24,7 @@ public class WavesGameMode : MonoBehaviour
         {
             SceneManager.LoadScene("LoseScreen");
         }
-
-        //if (basementLife.amount <= 10)
-        //{
-        //    SceneManager.LoadScene("LoseScreen");
-        //}
+        currnetEnemies.text = EnemiesManager.instance.enemies.Count.ToString();
     }
 
     void CheckWavesEnd()
