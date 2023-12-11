@@ -7,6 +7,7 @@ public class Life : MonoBehaviour
 {
     public float amount;
     public UnityEvent onDeath;
+    public AudioSource HitSound;
 
     // Update is called once per frame
     void Update()
@@ -16,5 +17,10 @@ public class Life : MonoBehaviour
             onDeath.Invoke();
             Destroy(gameObject);
         }
+    }
+
+    public void playHitSound()
+    {
+        HitSound.Play();
     }
 }

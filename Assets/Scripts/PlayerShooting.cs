@@ -10,6 +10,13 @@ public class PlayerShooting : MonoBehaviour
     public GameObject fireEffect;
     public bool isShotgunMode = false;
 
+    AudioSource fireSound;
+
+    void Start()
+    {
+        fireSound = GetComponent<AudioSource>();
+    }
+
     public void OnFire(InputValue value)
     {
         if (value.isPressed)
@@ -20,6 +27,7 @@ public class PlayerShooting : MonoBehaviour
 
                 clone.transform.position = shootPoint.transform.position;
                 clone.transform.rotation = shootPoint.transform.rotation;
+                fireSound.Play();
                 Instantiate(fireEffect, shootPoint.transform.position, shootPoint.transform.rotation);
             }
             else
@@ -35,7 +43,7 @@ public class PlayerShooting : MonoBehaviour
                 clone2.transform.position = shootPoint.transform.position;
                 clone2.transform.rotation = shootPoint.transform.rotation;
                 clone2.transform.Translate(-3, 0, 0);
-
+                fireSound.Play();
                 Instantiate(fireEffect, shootPoint.transform.position, shootPoint.transform.rotation);
             }
         }
