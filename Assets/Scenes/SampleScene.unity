@@ -46878,6 +46878,7 @@ GameObject:
   - component: {fileID: 1341754873}
   - component: {fileID: 1341754874}
   - component: {fileID: 1341754875}
+  - component: {fileID: 1341754876}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -46970,6 +46971,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   img: {fileID: 2124309582}
+--- !u!114 &1341754876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341754868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ceaf47ff0f18849b3cd87fde33dc62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  img: {fileID: 613931147}
 --- !u!1 &1353327913
 GameObject:
   m_ObjectHideFlags: 0
@@ -91387,9 +91401,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Basement
       objectReference: {fileID: 0}
+    - target: {fileID: 1316846016406985804, guid: 4816f7daf1cea524da32820b618bb3e4, type: 3}
+      propertyPath: m_TagString
+      value: Basement
+      objectReference: {fileID: 0}
     - target: {fileID: 7006841164473433419, guid: 4816f7daf1cea524da32820b618bb3e4, type: 3}
       propertyPath: amount
-      value: 1000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7519117056217185310, guid: 4816f7daf1cea524da32820b618bb3e4, type: 3}
       propertyPath: m_LocalPosition.x

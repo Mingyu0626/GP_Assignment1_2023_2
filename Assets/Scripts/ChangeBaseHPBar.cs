@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ChangeHPBar : MonoBehaviour
+public class ChangeBaseHPBar : MonoBehaviour
 {
     public Image img;
 
@@ -12,12 +12,13 @@ public class ChangeHPBar : MonoBehaviour
     {
     }
 
+    // Update is called once per frame
     void Update()
     {
-        float playerHP = GameObject.Find("Tank").GetComponent<Life>().amount;
-        if (playerHP >= 0)
+        float baseHP = GameObject.Find("Basement").GetComponent<Life>().amount;
+        if (baseHP >= 0)
         {
-            float ratio = playerHP / 100; // 나누는 수는 플레이어(탱크) 체력에 맞추면 된다
+            float ratio = baseHP / 100; // 나누는 수는 기지 체력에 맞추면 된다
             img.fillAmount = ratio;
         }
     }

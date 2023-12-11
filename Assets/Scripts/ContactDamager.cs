@@ -17,6 +17,7 @@ public class ContactDamager : MonoBehaviour
 
         if (life != null)
         {
+
             life.amount -= damage;
             if (other.CompareTag("Player"))
             {
@@ -24,5 +25,7 @@ public class ContactDamager : MonoBehaviour
             }
             Destroy(gameObject);
         }
+        else
+            Destroy(gameObject);
     }
 }
