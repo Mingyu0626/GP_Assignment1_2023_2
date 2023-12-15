@@ -11,7 +11,6 @@ public class WavesGameMode : MonoBehaviour
     public TextMeshProUGUI currnetEnemies;
     void Start()
     {
-        Invoke("CheckWavesEnd", 90);
     }
     void Update()
     {
@@ -20,7 +19,7 @@ public class WavesGameMode : MonoBehaviour
             SceneManager.LoadScene("WinScreen");
         }
 
-        if (playerLife.amount <= 0 || EnemiesManager.instance.enemies.Count >= 50 || basementLife.amount <= 0)
+        if (playerLife.amount <= 0 || EnemiesManager.instance.enemies.Count >= 40 || basementLife.amount <= 0)
         {
             SceneManager.LoadScene("LoseScreen");
         }

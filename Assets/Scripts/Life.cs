@@ -39,7 +39,7 @@ public class Life : MonoBehaviour
 
     public void checkLifeIsHalf()
     {
-        if (amount <= 25)
+        if (amount <= 15)
         {
             vignette.active = true;
         }
