@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Life : MonoBehaviour
 {

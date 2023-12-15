@@ -18,7 +18,7 @@ public class ChangeBaseHPBar : MonoBehaviour
         float baseHP = GameObject.Find("Basement").GetComponent<Life>().amount;
         if (baseHP >= 0)
         {
-            float ratio = baseHP / 100; // 나누는 수는 기지 체력에 맞추면 된다
+            float ratio = baseHP / 20; // 나누는 수는 기지 체력에 맞추면 된다
             img.fillAmount = ratio;
         }
     }
